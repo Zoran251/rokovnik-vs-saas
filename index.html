@@ -925,7 +925,7 @@ async function submitPoll() {
             })),
         };
 
-        const resp = await fetch('/api/submit', {
+        const resp = await fetch('/data/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload),
@@ -947,7 +947,7 @@ async function submitPoll() {
 // ===== RESULTS =====
 async function fetchAndRenderResults() {
     try {
-        const resp = await fetch('/api/results');
+        const resp = await fetch('/data/results');
         const data = await resp.json();
         renderResults(data);
         return data;

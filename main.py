@@ -137,12 +137,12 @@ async def index():
         return f.read()
 
 
-@app.get("/api/questions")
+@app.get("/data/questions")
 async def get_questions():
     return {"questions": QUESTIONS}
 
 
-@app.post("/api/submit")
+@app.post("/data/submit")
 async def submit_poll(submission: PollSubmission):
     data = load_data()
     record = submission.model_dump()
@@ -154,12 +154,12 @@ async def submit_poll(submission: PollSubmission):
     return {"status": "ok", "total_participants": len(data["submissions"])}
 
 
-@app.get("/api/results")
+@app.get("/data/results")
 async def get_results():
     return compute_results()
 
 
-@app.get("/api/submissions")
+@app.get("/data/submissions")
 async def get_submissions():
     data = load_data()
     return {"submissions": data["submissions"]}
