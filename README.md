@@ -4,9 +4,9 @@ Live anketa za vlasnike salona u beauty industriji. Backend: **FastAPI + WebSock
 
 ## 🔗 Linkovi
 
-- **Live app:** https://salon-poll.fly.dev
-- **Admin panel:** https://salon-poll.fly.dev/admin
-- **API (JSON):** https://salon-poll.fly.dev/api/submissions
+- **Live app:** https://rokovnik-vs-saas.onrender.com
+- **Admin panel:** https://rokovnik-vs-saas.onrender.com/admin
+- **API (JSON):** https://rokovnik-vs-saas.onrender.com/data/submissions
 
 ## 🚀 Stack
 
@@ -34,10 +34,10 @@ Live anketa za vlasnike salona u beauty industriji. Backend: **FastAPI + WebSock
 |--------|---------|------|
 | `GET` | `/` | Frontend stranica |
 | `GET` | `/admin` | Admin panel — tabela sa svim odgovorima |
-| `GET` | `/api/questions` | 5 pitanja sa opcijama |
-| `POST` | `/api/submit` | Slanje odgovora |
-| `GET` | `/api/results` | Agregirani rezultati |
-| `GET` | `/api/submissions` | Svi sirovi odgovori (JSON) |
+| `GET` | `/data/questions` | 5 pitanja sa opcijama |
+| `POST` | `/data/submit` | Slanje odgovora |
+| `GET` | `/data/results` | Agregirani rezultati |
+| `GET` | `/data/submissions` | Svi sirovi odgovori (JSON) |
 | `WS` | `/ws` | WebSocket za live update |
 
 ## 🏠 Lokalno pokretanje
